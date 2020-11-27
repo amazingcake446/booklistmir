@@ -44,13 +44,6 @@ function addBook(event) {
 
 
 /*************** Classes ************/
-class Book {
-    constructor(isbn, title, author) {
-        this.isbn = isbn;
-        this.title = title;
-        this.author = author;
-    }
-}
 
 
 /* Ui */
@@ -69,6 +62,15 @@ class Ui {
         const container = document.querySelector('.container')
         const form = document.querySelector('.book-form'); 
         container.insertBefore(div, form); 
+
+        this.removeMessage(); 
+    }
+
+    static removeMessage(){
+        setTimeout(function(){
+           document.querySelector('.alert').remove();   
+            
+        },3000)
     }
 
 
