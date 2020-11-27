@@ -17,7 +17,7 @@ class Ui {
 
         this.removeMessage(); 
     }
-
+    
     static removeMessage(){
         setTimeout(function(){
            document.querySelector('.alert').remove();   
@@ -25,10 +25,8 @@ class Ui {
         },3000)
     }
 
-
     static renderToDom(bookObj) {
         const tableBody = document.querySelector('.table-body');
-
         let html =
             `
             <tr>
@@ -41,7 +39,6 @@ class Ui {
         tableBody.innerHTML += html; 
 
     }
-
     static clearInputFields() {
         let isbn = document.querySelector('#isbn')
         let title = document.querySelector('#title')
