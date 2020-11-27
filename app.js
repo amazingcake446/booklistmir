@@ -1,7 +1,7 @@
 /* import */
 import Book from '/book.js';
 import Ui from '/ui.js';
-
+import DB from '/database.js'; 
 
 (function app(test) {
    /* entry point */
@@ -27,7 +27,8 @@ import Ui from '/ui.js';
 		if (isbn && title && author != '') {
 
 			/* creating an object using the book class constructor */
-			const book = new Book(isbn, title, author);
+            const book = new Book(isbn, title, author);
+            DB.save(book);
 			console.log(book);
 
 
